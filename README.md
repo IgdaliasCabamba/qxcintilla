@@ -1,0 +1,2 @@
+# qxcintilla
+Improved QScintilla
