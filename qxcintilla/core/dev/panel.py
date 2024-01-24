@@ -8,7 +8,6 @@ if TYPE_CHECKING:
 
 from dataclasses import dataclass
 from qtpy.QtWidgets import QFrame
-from ...internal import BaseElement
 
 class Panel(QFrame):
     
@@ -35,7 +34,7 @@ class Panel(QFrame):
             """ Returns possible positions as an iterable (list) """
             return [cls.TOP, cls.LEFT, cls.RIGHT, cls.BOTTOM]
 
-    class _Properties(BaseElement):
+    class _Properties:
         
         @property
         def panel(self) -> Panel:

@@ -1,7 +1,6 @@
 from typing import Union, List
 from typing_extensions import Self
 from ...core import Panel, TextEngine
-from qtpy.QtCore import QRect
 from .size_helpers import PanelsSizeHelpers
 
 
@@ -88,7 +87,7 @@ class PanelsManager(PanelsSizeHelpers):
             rect = self.editor.contentsRect()
 
         """Updates panels"""
-        helper = TextEngine(self.editor)
+        helper = TextEngine(self.editor) # TODO: use qsci methods
 
         for zones_id, zone in self._widgets.items():
             if zones_id == Panel.Position.TOP or zones_id == Panel.Position.BOTTOM:

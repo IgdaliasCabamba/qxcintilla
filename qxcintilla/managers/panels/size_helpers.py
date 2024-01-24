@@ -1,4 +1,4 @@
-from ...core import Panel, TextEngine
+from ...core import Panel
 from qtpy.QtCore import QRect, QSize
 from .base_manager import BasePanelManager
 
